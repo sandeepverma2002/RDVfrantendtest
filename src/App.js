@@ -2,7 +2,8 @@ import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
-const API_URL = 'https://rdvsite.onrender.com/api/users'; // Backend API URL
+const API_URL = process.env.REACT_APP_API_URL;
+console.log('API URL:', process.env.REACT_APP_API_URL);
 
 function App() {
   const [users, setUsers] = useState([]);
